@@ -46,12 +46,12 @@ def run():
     """
     app.logger.setLevel(app.config.get('LOG_LEVEL', logging.INFO))
     service_config = {
-        'bind': app.config.get('BIND', '0.0.0.0:8891'),
-        'workers': app.config.get('WORKERS', cpu_count() * 2 + 1),
+        'bind': app.config.get('BIND', '0.0.0.0:8081'),
+        'workers': app.config.get('WORKERS', 2),# cpu_count() * 2 + 1),
         'worker_class': 'gevent',
-        'worker_connections': app.config.get('WORKER_CONNECTIONS', 10000),
+        'worker_connections': app.config.get('WORKER_CONNECTIONS', 1000),
         'backlog': app.config.get('BACKLOG', 2048),
-        'timeout': app.config.get('TIMEOUT', 60),
+        'timeout': app.config.get('TIMEOUT', 600),
         'loglevel': app.config.get('LOG_LEVEL', 'info'),
         'pidfile': app.config.get('PID_FILE', 'run.pid'),
     }

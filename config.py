@@ -6,7 +6,7 @@ import multiprocessing
 MODE = 'production'
 
 # data_process 服务器 ip+端口
-ALLOW_IPS = ['43.139.105.41','159.75.217.15']
+ALLOW_IPS = ['43.139.105.41','159.75.217.15','172.21.0.3','42.192.160.69']
 class ProductionConfig(object):
     """
     生产配置 
